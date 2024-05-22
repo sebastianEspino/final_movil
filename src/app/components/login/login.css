@@ -1,0 +1,50 @@
+button{
+    width: 500px;
+    border-radius: 15%;
+    background-color:#CA2141;
+    color: #fcf9ee;
+}
+
+.completo{
+    width: 100%;
+}
+.logo{
+    width: 50%;
+}
+.centrado{
+    text-align: center;
+    color: #fcf9ee;
+    font-size: 40%;
+    font-weight: bold;
+}
+.espacio1{
+    height:400px;
+}
+.espacio2{
+    height:150px;
+}
+.label_imput{
+    font-size: 15%;
+    color: #fcf9ee;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+.inputs{
+    
+    font-size: 15%;
+    color: #fcf9ee;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+.input_password{
+    font-size: 15%;
+    color: #fcf9ee;
+    margin-left: 300px;
+    margin-right: 300px;
+    
+}
+.label_noti{
+    margin-top: 10px;
+    text-align: center;
+    color: #CA2141;
+}

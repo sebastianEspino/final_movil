@@ -1,0 +1,134 @@
+<ScrollView orientation="vertical">
+    <GridLayout rows=" 130 80 310 80 310 80 300 200 " backgroundColor="#faf5e2">
+
+        <StackLayout row="0" justifyContent="center">
+            <StackLayout backgroundColor="#fcf9ee" marginTop="2">
+                <FlexboxLayout class="nav">
+                    <AbsoluteLayout position="relative">
+                        <Image src="~/app/images/fondo_nav.png"></Image>
+                        <FlexboxLayout class="completo_nav">
+                            <button class="fas" backgroundColor="#CA2141" color="white" text="&#xf060;"
+                                android.systemIcon="ic_menu_back" (tap)="onTap()"></button>
+                            <button class="fas" backgroundColor="#CA2141" color="white" text="&#xf07a;"></button>
+                            <button class="fas" backgroundColor="#CA2141" color="white" text="&#xf2f5;"
+                                android.systemIcon="ic_menu_back" (tap)="onTap()"></button>
+                        </FlexboxLayout>
+                    </AbsoluteLayout>
+                </FlexboxLayout>
+            </StackLayout>
+        </StackLayout>
+
+        <StackLayout row="1">
+            <AbsoluteLayout position="relative">
+                <Image src="~/app/images/fondo_titulo.png"></Image>
+                <StackLayout class="completo">
+                    <label backgroundColor="black" height="2"></label>
+                    <label class="separador1" text="Nuestras promos"></label>
+                    <label backgroundColor="black" height="2"></label>
+                </StackLayout>
+            </AbsoluteLayout>
+        </StackLayout>
+
+        <StackLayout row="2" justifyContent="center">
+            <ScrollView orientation="horizontal">
+                <FlexboxLayout justifyContent="space-around" marginTop="2">
+                    <AbsoluteLayout position="relative">
+                        <Image class="completo_carta" src="~/app/images/targetas_fondo.png"></Image>
+                        <AbsoluteLayout position="relative">
+                            <Image src="~/app/images/tuercas.png" class="completo_carta_img"></Image>
+                            <label  class="label_promo" text="Promos-Promos"></label>
+                        </AbsoluteLayout>
+                    </AbsoluteLayout>
+                    <AbsoluteLayout position="relative">
+                        <Image class="completo_carta" src="~/app/images/targetas_fondo.png"></Image>
+                        <AbsoluteLayout position="relative">
+                            <Image src="~/app/images/tuercas.png" class="completo_carta_img"></Image>
+                            <label backgroundColor="#CA2141" class="label_promo" text="PROMO-PROMO"></label>
+                        </AbsoluteLayout>
+                    </AbsoluteLayout>
+                </FlexboxLayout>
+            </ScrollView>
+        </StackLayout>
+
+        <StackLayout row="3">
+            <AbsoluteLayout position="relative" class="separadores">
+                <Image src="~/app/images/fondo_titulo.png"></Image>
+                <StackLayout class="completo">
+                    <label backgroundColor="black" height="2"></label>
+                    <label class="separador1" text="Proveedores"></label>
+                    <label backgroundColor="black" height="2"></label>
+                </StackLayout>
+            </AbsoluteLayout>
+        </StackLayout>
+
+        <StackLayout row="4">
+            <ScrollView orientation="horizontal">
+                <FlexboxLayout justifyContent="space-around">
+                    <img src="~/app/images/volvo.png" class="imgs_provedores">
+                    <img src="~/app/images/ferrari.png" class="imgs_provedores">
+                    <img src="~/app/images/nissan.png" class="imgs_provedores">
+                    <img src="~/app/images/volvo.png" class="imgs_provedores">
+                    <img src="~/app/images/ferrari.png" class="imgs_provedores">
+                    <img src="~/app/images/nissan.png" class="imgs_provedores">
+                </FlexboxLayout>
+            </ScrollView>
+        </StackLayout>
+
+        <StackLayout row="5">
+            <AbsoluteLayout position="relative" class="separadores">
+                <Image src="~/app/images/fondo_titulo.png"></Image>
+                <StackLayout class="completo">
+                    <label backgroundColor="black" height="2"></label>
+                    <label class="separador1" text="Productos destacados"></label>
+                    <label backgroundColor="black" height="2"></label>
+                </StackLayout>
+            </AbsoluteLayout>
+        </StackLayout>
+
+        <StackLayout row="6" justifyContent="center">
+            <ScrollView orientation="horizontal">
+                <FlexboxLayout justifyContent="space-around" marginTop="2">
+                    <AbsoluteLayout position="relative">
+                        <Image class="completo_carta2" src="~/app/images/targetas_producto.png"></Image>
+                        <AbsoluteLayout position="relative">
+                            <Image src="~/app/images/michelin.png" class="completo_carta_img2"></Image>
+                            <label text=" $ 543.00 " class="precio"></label>
+                            <label class="info_producto" text="Llantas michelin"></label>
+                        </AbsoluteLayout>
+                    </AbsoluteLayout>
+                    <AbsoluteLayout position="relative">
+                        <Image class="completo_carta2" src="~/app/images/targetas_producto.png"></Image>
+                        <AbsoluteLayout position="relative">
+                            <Image src="~/app/images/pirelli.png" class="completo_carta_img2"></Image>
+                            <label text=" $ 543.00 " class="precio"></label>
+                            <label class="info_producto" text="Llantas pirelli"></label>
+                        </AbsoluteLayout>
+                    </AbsoluteLayout>
+                </FlexboxLayout>
+            </ScrollView>
+        </StackLayout>
+
+        <StackLayout row="7" backgroundColor="#fcf9ee" paddingTop="15">
+            <StackLayout >
+                <AbsoluteLayout position="relative">
+                    <Image src="~/app/images/fondo_titulo.png"></Image>
+                    <StackLayout class="completo">
+                        <label backgroundColor="black" height="2"></label>
+                        <label class="separador1" text="Conocenos"></label>
+                        <label backgroundColor="black" height="2"></label>
+                    </StackLayout>
+                </AbsoluteLayout>
+                
+                <AbsoluteLayout position="relative">
+                    <Image src="~/app/images/fondo_footer.png"></Image>
+                    <StackLayout class="completo">
+                        <label class="inf" text="Telefono: 30325693 ext: 120 " marginTop="20"></label>
+                        <label class="inf" text="E-mail: Reepweels@road.com"></label>
+                        <label class="inf" text="Direccion: Cra 33 av 12 #33-14"></label>
+                        <label class="inf" text="Instagram: @repwheels__"></label>
+                    </StackLayout>
+                </AbsoluteLayout>
+            </StackLayout>
+        </StackLayout>
+    </GridLayout>
+</ScrollView>

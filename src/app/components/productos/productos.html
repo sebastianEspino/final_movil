@@ -1,0 +1,16 @@
+<ActionBar backgroundColor="black">
+  <Label style="color: white" text="Productos" ></Label>
+  
+</ActionBar>
+<StackLayout >
+  <ListView height="150" [items]="productos" (itemTap)="onItemTap($event)" class="list-group">
+      <ng-template let-item="item" let-i="index" let-odd="odd" let-even="even">
+          <GridLayout columns="30, *, 35, auto">
+              <Label [text]="item.id" col="0" class="fas list-group-item"></Label>
+              <Label [text]="item.nombre" col="1" class="fas list-group-item"></Label>
+              <Label text="&#xf2ed;" col="2" class="far list-group-item" (tap)="eliminarCat(item)"></Label>
+              <Label text="&#xf044;" col="3" class="far list-group-item" (tap)="editarCat(item)"></Label>
+          </GridLayout>
+      </ng-template>
+  </ListView>
+</StackLayout>

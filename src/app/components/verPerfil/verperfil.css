@@ -1,0 +1,52 @@
+#pe{
+    border-radius: 90px;
+    width: 400px;
+    height: 600px;
+}
+
+
+.fas{
+    width: 200px;
+    border-radius: 0%;
+    background-color: white;
+    color: black;
+    
+}
+
+button{
+    width: 400px;
+    border-radius: 20%;
+    background-color:#cea322;
+}
+
+
+.fas{
+    width: 200px;
+    border-radius: 0%;
+    background-color:white;
+    color: black;
+    
+}
+
+label{
+    color:rgb(0, 0, 0);
+    font-size: 14px;
+}
+
+button{
+    font-size: 13px;
+    width: 350px;
+
+}
+
+#container{
+    background-color: rgb(255, 255, 255);
+    border-radius: 20%;
+    border-width: 2;
+    height: 1400px;
+    padding: 50px;
+    border-color: black;
+    text-align: center;
+
+
+}

@@ -1,0 +1,21 @@
+<StackLayout>
+  <AbsoluteLayout position="relative">
+    <Image class="completo" src="~/app/images/fondo_login.png"></Image>
+      <StackLayout class="completo">
+        <Image class="logo" src="~/app/images/sin_fondo.png"></Image>
+        <label class="espacio1"></label>
+        <label class="centrado" text="Inicio de Sesion"></label>
+        <label class="espacio2"></label>
+          <StackLayout>
+            <Label text="E-MAIL " class="label_imput"></Label>
+            <TextField class="inputs"></TextField>
+            <Label text="CONTRASEÑA" class="label_imput"></Label>
+            <TextField class="inputs" type="password"></TextField>
+            <label class="espacio2"></label>
+            <Button text="INGRESAR " [nsRouterLink]="['/landing']" pageTransition="slide" clearHistory="true"></Button>
+            <Label class="label_noti" text="¿No tienes una cuenta?"></Label>
+            <Button text="REGISTRARSE" [nsRouterLink]="['/registro']" pageTransition="slide"></Button>
+          </StackLayout>
+      </StackLayout>
+  </AbsoluteLayout>
+</StackLayout>
