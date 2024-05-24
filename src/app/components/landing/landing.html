@@ -1,5 +1,5 @@
 <ScrollView orientation="vertical">
-    <GridLayout rows=" 130 80 310 80 310 80 300 200 " backgroundColor="#faf5e2">
+    <GridLayout rows=" 130 80 310 80 310 80 350 200 " backgroundColor="#faf5e2">
 
         <StackLayout row="0" justifyContent="center">
             <StackLayout backgroundColor="#fcf9ee" marginTop="2">
@@ -19,14 +19,7 @@
         </StackLayout>
 
         <StackLayout row="1">
-            <AbsoluteLayout position="relative">
-                <Image src="~/app/images/fondo_titulo.png"></Image>
-                <StackLayout class="completo">
-                    <label backgroundColor="black" height="2"></label>
-                    <label class="separador1" text="Nuestras promos"></label>
-                    <label backgroundColor="black" height="2"></label>
-                </StackLayout>
-            </AbsoluteLayout>
+                <label class="separador1" text="Nuestras promos"></label>
         </StackLayout>
 
         <StackLayout row="2" justifyContent="center">
@@ -34,31 +27,16 @@
                 <FlexboxLayout justifyContent="space-around" marginTop="2">
                     <AbsoluteLayout position="relative">
                         <Image class="completo_carta" src="~/app/images/targetas_fondo.png"></Image>
-                        <AbsoluteLayout position="relative">
-                            <Image src="~/app/images/tuercas.png" class="completo_carta_img"></Image>
-                            <label  class="label_promo" text="Promos-Promos"></label>
-                        </AbsoluteLayout>
-                    </AbsoluteLayout>
-                    <AbsoluteLayout position="relative">
-                        <Image class="completo_carta" src="~/app/images/targetas_fondo.png"></Image>
-                        <AbsoluteLayout position="relative">
-                            <Image src="~/app/images/tuercas.png" class="completo_carta_img"></Image>
-                            <label backgroundColor="#CA2141" class="label_promo" text="PROMO-PROMO"></label>
-                        </AbsoluteLayout>
-                    </AbsoluteLayout>
+                        <Image class="completo_carta" src="~/app/images/tuercas.png"></Image>
+                        <label text="promos" class="completo_carta_info"></label>    
+                        
+                    </AbsoluteLayout>    
                 </FlexboxLayout>
             </ScrollView>
         </StackLayout>
 
         <StackLayout row="3">
-            <AbsoluteLayout position="relative" class="separadores">
-                <Image src="~/app/images/fondo_titulo.png"></Image>
-                <StackLayout class="completo">
-                    <label backgroundColor="black" height="2"></label>
-                    <label class="separador1" text="Proveedores"></label>
-                    <label backgroundColor="black" height="2"></label>
-                </StackLayout>
-            </AbsoluteLayout>
+            <label class="separador1" text="Proveedores"></label>
         </StackLayout>
 
         <StackLayout row="4">
@@ -75,14 +53,7 @@
         </StackLayout>
 
         <StackLayout row="5">
-            <AbsoluteLayout position="relative" class="separadores">
-                <Image src="~/app/images/fondo_titulo.png"></Image>
-                <StackLayout class="completo">
-                    <label backgroundColor="black" height="2"></label>
-                    <label class="separador1" text="Productos destacados"></label>
-                    <label backgroundColor="black" height="2"></label>
-                </StackLayout>
-            </AbsoluteLayout>
+            <label class="separador1" text="Productos"></label>
         </StackLayout>
 
         <StackLayout row="6" justifyContent="center">
@@ -90,42 +61,29 @@
                 <FlexboxLayout justifyContent="space-around" marginTop="2">
                     <AbsoluteLayout position="relative">
                         <Image class="completo_carta2" src="~/app/images/targetas_producto.png"></Image>
-                        <AbsoluteLayout position="relative">
-                            <Image src="~/app/images/michelin.png" class="completo_carta_img2"></Image>
-                            <label text=" $ 543.00 " class="precio"></label>
-                            <label class="info_producto" text="Llantas michelin"></label>
-                        </AbsoluteLayout>
+                        <Image src="~/app/images/michelin.png" class="completo_carta_img2"></Image>
+                        <label text=" $ 543.00 " class="precio"></label>
+                        <label class="info_producto" text="Llantas michelin"></label>
+
                     </AbsoluteLayout>
-                    <AbsoluteLayout position="relative">
-                        <Image class="completo_carta2" src="~/app/images/targetas_producto.png"></Image>
-                        <AbsoluteLayout position="relative">
-                            <Image src="~/app/images/pirelli.png" class="completo_carta_img2"></Image>
-                            <label text=" $ 543.00 " class="precio"></label>
-                            <label class="info_producto" text="Llantas pirelli"></label>
-                        </AbsoluteLayout>
-                    </AbsoluteLayout>
+                    
                 </FlexboxLayout>
             </ScrollView>
         </StackLayout>
 
         <StackLayout row="7" backgroundColor="#fcf9ee" paddingTop="15">
             <StackLayout >
-                <AbsoluteLayout position="relative">
-                    <Image src="~/app/images/fondo_titulo.png"></Image>
-                    <StackLayout class="completo">
-                        <label backgroundColor="black" height="2"></label>
-                        <label class="separador1" text="Conocenos"></label>
-                        <label backgroundColor="black" height="2"></label>
-                    </StackLayout>
-                </AbsoluteLayout>
+                <StackLayout>
+                    <label class="separador2" text="Conocenos"></label>
+                </StackLayout>
                 
                 <AbsoluteLayout position="relative">
                     <Image src="~/app/images/fondo_footer.png"></Image>
-                    <StackLayout class="completo">
-                        <label class="inf" text="Telefono: 30325693 ext: 120 " marginTop="20"></label>
-                        <label class="inf" text="E-mail: Reepweels@road.com"></label>
-                        <label class="inf" text="Direccion: Cra 33 av 12 #33-14"></label>
-                        <label class="inf" text="Instagram: @repwheels__"></label>
+                    <StackLayout class="derecha">
+                        <label class="derecha" text="Telefono: 30325693 ext: 120 " marginTop="20"></label>
+                        <label class="derecha" text="E-mail: Reepweels@road.com"></label>
+                        <label class="derecha" text="Direccion: Cra 33 av 12 #33-14"></label>
+                        <label class="derecha" text="Instagram: @repwheels__"></label>
                     </StackLayout>
                 </AbsoluteLayout>
             </StackLayout>
