@@ -1,10 +1,10 @@
-import { Router } from "@angular/router"; 
+import { Router } from "@angular/router";
 import { Component, OnInit } from '@angular/core'
 import { Page } from "@nativescript/core";
 
 @Component({
   selector: 'login',
-  templateUrl:'./login.html',
+  templateUrl: './login.html',
   styleUrls: ['./login.css']
 })
 export class LoginComponent implements OnInit {
@@ -13,6 +13,5 @@ export class LoginComponent implements OnInit {
   }
   ngOnInit(): void {
     this.page.actionBarHidden = true;
-}
- 
+  }
 }

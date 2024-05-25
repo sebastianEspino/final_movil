@@ -55,9 +55,20 @@ button{
   margin-top: 5;
   font-weight: bold;
 }
+.gestion{
+  color: #fcf9ee;
+  background-color:#CA2141 ;
+  width: 50%;
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 7;
+  margin-bottom: 17;
+  font-size: 15%;
+}
 #detalle{
   margin-left: 25%;
   margin-top: 20;
+  
 }
 #comprar{
   margin-left: 80%;

@@ -13,10 +13,12 @@
         </AbsoluteLayout>
       </FlexboxLayout>
     </StackLayout>
+    <button class="gestion" backgroundColor="#44B1D0" text="Gestion de productos"></button>
     <FlexboxLayout>
       <SearchBar class="busqueda" hint="Buscar ... " marginBottom="10" />
       <button id="vercarrito" class="fas" backgroundColor="#CA2141" color="white" text="&#xf218; ver" (tap)="productos()"></button>
     </FlexboxLayout>
+    
   </StackLayout>
 
   <ScrollView>
@@ -28,7 +30,7 @@
         <label class="producto_precio" text="$ 430.000 "></label>
         <label class="info_producto" text=" Llantas michelin"></label>
         <button id="comprar" class="fas" backgroundColor="#CA2141" color="white" text="&#xf217;"></button>
-        <button id="detalle" class="fas" backgroundColor="#CA2141" color="white" text="&#xf06e;" (tap)="productosver()"></button>
+        <button id="detalle" class="fas" backgroundColor="#44B1D0" color="white" text="&#xf06e;" (tap)="productosver()"></button>
       </AbsoluteLayout>
 
       <AbsoluteLayout position="relative" class="contenedor_productos">
@@ -37,7 +39,7 @@
         <label class="producto_precio" text="$ 430.000 "></label>
         <label class="info_producto" text=" Llantas pirelli"></label>
         <button id="comprar" class="fas" backgroundColor="#CA2141" color="white" text="&#xf217;"></button>
-        <button id="detalle" class="fas" backgroundColor="#CA2141" color="white" text="&#xf06e;" (tap)="productosver()"></button>
+        <button id="detalle" class="fas" backgroundColor="#44B1D0" color="white" text="&#xf06e;" (tap)="productosver()"></button>
       </AbsoluteLayout>
 
     </StackLayout>
