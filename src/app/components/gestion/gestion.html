@@ -1,0 +1,54 @@
+<StackLayout backgroundColor="#232323">
+
+    <StackLayout justifyContent="center">
+        <StackLayout backgroundColor="#fcf9ee" justifyContent="center" class="nav">
+            <FlexboxLayout class="nav">
+                <AbsoluteLayout position="relative">
+                    <Image src="~/app/images/fondo_nav2.png"></Image>
+                    <FlexboxLayout class="botones_nav">
+                        <button class="fas" backgroundColor="#CA2141" color="white" text="&#xf015;"
+                            (tap)="onTap()"></button>
+                        <button class="fas" backgroundColor="#CA2141" color="white" text="&#xf07a;"
+                            (tap)="productos()"></button>
+                        <button class="fas" backgroundColor="#CA2141" color="white" text="&#xf007;"
+                            (tap)="perfil()"></button>
+                    </FlexboxLayout>
+                </AbsoluteLayout>
+            </FlexboxLayout>
+        </StackLayout>
+        <FlexboxLayout>
+            <SearchBar class="busqueda" hint="Buscar ... " marginBottom="10" />
+            <button id="vercarrito" class="fas" backgroundColor="#CA2141" color="white" text="&#xf218; ver"
+                (tap)="productos()"></button>
+        </FlexboxLayout>
+
+    </StackLayout>
+
+    <ScrollView>
+
+        <StackLayout>
+            <AbsoluteLayout position="relative" class="contenedor_productos">
+                <Image class="fondo_producto" src=" ~/app/images/productos.png"></Image>
+                <Image class="producto_img" src=" ~/app/images/michelin.png"></Image>
+                <label class="producto_precio" text="$ 430.000 "></label>
+                <label class="info_producto" text=" Llantas michelin"></label>
+                <button id="comprar" class="fas" backgroundColor="#CA2141" color="white" text="&#xf217;"></button>
+                <button id="detalle" class="fas" backgroundColor="#44B1D0" color="white" text="&#xf06e;"
+                    ></button>
+            </AbsoluteLayout>
+
+            <AbsoluteLayout position="relative" class="contenedor_productos">
+                <Image class="fondo_producto" src=" ~/app/images/productos.png"></Image>
+                <Image class="producto_img" src=" ~/app/images/pirelli.png"></Image>
+                <label class="producto_precio" text="$ 430.000 "></label>
+                <label class="info_producto" text=" Llantas pirelli"></label>
+                <button id="comprar" class="fas" backgroundColor="#CA2141" color="white" text="&#xf217;"></button>
+                <button id="detalle" class="fas" backgroundColor="#44B1D0" color="white" text="&#xf06e;"
+                    ></button>
+            </AbsoluteLayout>
+
+        </StackLayout>
+
+    </ScrollView>
+
+</StackLayout>

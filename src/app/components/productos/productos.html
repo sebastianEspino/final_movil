@@ -13,7 +13,7 @@
         </AbsoluteLayout>
       </FlexboxLayout>
     </StackLayout>
-    <button class="gestion" backgroundColor="#44B1D0" text="Gestion de productos"></button>
+    <button class="gestion" backgroundColor="#44B1D0" text="Gestion de productos" (tap)="gestion()"></button>
     <FlexboxLayout>
       <SearchBar class="busqueda" hint="Buscar ... " marginBottom="10" />
       <button id="vercarrito" class="fas" backgroundColor="#CA2141" color="white" text="&#xf218; ver" (tap)="productos()"></button>

@@ -26,4 +26,5 @@ export class ProductoVerComponent implements OnInit {
   public cerrar_sesion(){
     this.router.navigate(["login"])
   }
+  
 }
