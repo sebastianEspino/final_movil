@@ -4,7 +4,7 @@ import { VerPerfilComponent } from "./components/verPerfil/verperfil";
 import { RegistroComponent } from "./components/registro/registro";
 import { LandingComponent } from "./components/landing/landing";  
 import { ProductosComponent } from "./components/productos/productos"; 
-
+import { ProductoVerComponent } from "./components/productoVer/productoVer";
 
 
 
@@ -16,6 +16,7 @@ export const appRoutes: any = [
   { path: "registro", component: RegistroComponent },
   { path: "landing", component: LandingComponent },
   { path: "productos", component: ProductosComponent },
+  { path: "productoVer", component: ProductoVerComponent },
 ];
 
 export const appComponents: any = [
@@ -24,4 +25,5 @@ export const appComponents: any = [
   RegistroComponent,
   LandingComponent,
   ProductosComponent,
+  ProductoVerComponent,
 ];

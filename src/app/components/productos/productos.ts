@@ -24,6 +24,9 @@ export class ProductosComponent implements OnInit {
   public productos(){
     this.router.navigate(["productos"])
   }
+  public productosver(){
+    this.router.navigate(["productoVer"])
+  }
 }
 
 
