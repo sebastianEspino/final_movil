@@ -1,24 +1,64 @@
-ol.btn {
-    height: 50;
-    font-size: 20;
-    color: #fff; 
-    background-color: #ffffff;
-  }
-  stack-layout {
-    position: absolute;
-    bottom: 0;
-  }
-  
-#card{
-    border-color: black;
-    border-radius: 5;
-    width: 375px;
-    border-width: 2;
+button{
+  border-radius: 15%;
+}
+.botones_nav{ /*estos son los settings de los btns nav */
+  margin-left: 11%;
+  margin-top: 30%;
+}
+.nav{
+  height: 340px;
 }
 
-.negrita{
+.busqueda{
+  width: 50%;
+  margin-left: 13%;
+  background-color:#fcf9ee ;
+  color: black;
+  border-radius: 20%;
+  font-size: 15%;
+  font-style: italic;
+}
+.vercarrito{
+  margin-bottom: 5%;
+  margin-right: 10%;
+}
+.contenedor_productos{
+  margin: 5;
+}
+.fondo_producto{
+  background-color: #fcf9ee;
+  height: 90;
+  width: 100%;
+  border-radius: 25%;
+}
+.producto_img{
+  height: 90;
+  border-radius: 25%;
+  margin-right: 100%;
+}
+.producto_precio{
+  background-color: #232323 ;
+  text-align: center;
+  height: 40;
+  width: 22%;
+  border-radius: 20%;
+  margin-left: 50%;
+  margin-top: 33;
+}
+.info_producto{
+  color: #232323 ;
+  text-align: center;
+  width: 40%;
+  margin-left: 40%;
+  font-size: 18%;
+  margin-top: 5;
   font-weight: bold;
-  font-size: 25px;  
 }
-
-
+#detalle{
+  margin-left: 25%;
+  margin-top: 20;
+}
+#comprar{
+  margin-left: 80%;
+  margin-top: 20;
+}

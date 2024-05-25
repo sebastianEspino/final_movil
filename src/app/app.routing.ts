@@ -10,7 +10,7 @@ import { ProductosComponent } from "./components/productos/productos";
 
 
 export const appRoutes: any = [
-  { path: '', redirectTo: 'landing', pathMatch: 'full' },
+  { path: '', redirectTo: 'productos', pathMatch: 'full' },
   { path: "login", component: LoginComponent },
   { path: "verperfil", component: VerPerfilComponent },
   { path: "registro", component: RegistroComponent },
