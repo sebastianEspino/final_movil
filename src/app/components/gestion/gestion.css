@@ -13,8 +13,8 @@ button {
 }
 
 .busqueda {
-    width: 50%;
-    margin-left: 13%;
+    width: 60%;
+    
     background-color: #fcf9ee;
     color: black;
     border-radius: 20%;
@@ -59,7 +59,7 @@ button {
     color: #232323;
     text-align: center;
     width: 40%;
-    margin-left: 40%;
+    margin-left: 36%;
     font-size: 18%;
     margin-top: 5;
     font-weight: bold;
@@ -75,14 +75,39 @@ button {
     margin-bottom: 17;
     font-size: 15%;
 }
-
-#detalle {
-    margin-left: 25%;
-    margin-top: 20;
-
+.labels{
+    color: #fcf9ee;
+    text-align: center;
+    font-size: 15%;
+    font-weight: bold;
+    font-style: italic;
+}
+.titulo{
+    background-color: #CA2141;
+    width: 100%;
+    border-radius: 15%;
+    margin: 50;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20%;
+    color: #fcf9ee;
+    text-align: center;
+}
+.inputs{
+    width: 60%;
 }
 
-#comprar {
-    margin-left: 80%;
-    margin-top: 20;
+#ver {
+    margin-left: 40%;
+    margin-top: 30;
+
+}
+#editar{
+    margin-top: 30;
+    margin-left: 57%;
+}
+
+#borrar {
+    margin-left: 74%;
+    margin-top: 30;
 }
