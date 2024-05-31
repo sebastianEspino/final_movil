@@ -10,7 +10,7 @@ import { GestionComponent } from "./components/gestion/gestion";
 
 
 export const appRoutes: any = [
-  { path: '', redirectTo: 'gestion', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: "login", component: LoginComponent },
   { path: "verperfil", component: VerPerfilComponent },
   { path: "registro", component: RegistroComponent },

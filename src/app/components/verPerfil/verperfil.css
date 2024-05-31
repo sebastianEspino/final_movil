@@ -17,14 +17,8 @@ button{
     margin-top: 35%;
     margin-left: 35%;
 }
-.divisor_marco{
-    border-radius: 100%;
-    width: 34%;
-    height: 60%;
-    margin-top: 31%;
-    margin-left: 33%;
-    background-color: #CA2141;
-}
+
+
 .centrado{
     color: black;
     text-align: center;
@@ -38,7 +32,7 @@ button{
     margin-top: 5%;
 }
 .centrado_sesion{
-    margin-top: 30%;
+    margin-top: 25%;
     text-align: center;
     color: #CA2141;
 }
