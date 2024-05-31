@@ -8,11 +8,17 @@
         <label class="espacio2"></label>
           <StackLayout>
             <Label text="E-MAIL " class="label_imput"></Label>
-            <TextField class="inputs"></TextField>
+            <TextField class="inputs" class="label_imput" [text]="nick"
+            class="fas"
+            (textChange)="inputChange($event, 'nick')"
+            placeholder="Usuario"></TextField>
             <Label text="CONTRASEÑA" class="label_imput"></Label>
-            <TextField class="inputs" type="password"></TextField>
+            <TextField class="input_password"  [text]="password"
+            class="fas"
+            (textChange)="inputChange($event, 'password')"
+            placeholder="contrasena" secure="true"></TextField>
             <label class="espacio2"></label>
-            <Button text="INGRESAR " [nsRouterLink]="['/landing']" pageTransition="slide" clearHistory="true"></Button>
+            <Button text="INGRESAR " (tap)="loguear()" pageTransition="slide" clearHistory="true"></Button>
             <Label class="label_noti" text="¿No tienes una cuenta?"></Label>
             <Button text="REGISTRARSE" [nsRouterLink]="['/registro']" pageTransition="slide"></Button>
           </StackLayout>
