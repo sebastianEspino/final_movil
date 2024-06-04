@@ -24,24 +24,14 @@
   <ScrollView>
 
     <StackLayout>
-      <AbsoluteLayout position="relative" class="contenedor_productos">
-        <Image class="fondo_producto" src=" ~/app/images/productos.png"></Image>
-        <Image class="producto_img" src=" ~/app/images/michelin.png"></Image>
-        <label class="producto_precio" text="$ 430.000 "></label>
-        <label class="info_producto" text=" Llantas michelin"></label>
-        <button id="comprar" class="fas" backgroundColor="#CA2141" color="white" text="&#xf217;"></button>
-        <button id="detalle" class="fas" backgroundColor="#44B1D0" color="white" text="&#xf06e;" (tap)="productosver()"></button>
+      <AbsoluteLayout position="relative" class="contenedor_productos" *ngFor="let producto of productos1" id="card" class="p-5 m-l-15 m-r-15 m-b-15 text-center">
+        <Image class="fondo_producto" ></Image>
+        <Image class="producto_img" [src]="producto.foto"></Image>
+        <label class="producto_precio" text="{{ producto.Precio }}"></label>
+        <label class="info_producto" text=" {{ producto.nombre }}"></label>
+        <button id="comprar" class="fas" backgroundColor="#CA2141" color="white" text="&#xf217;" ></button>
+        <button id="detalle" class="fas" backgroundColor="#44B1D0" color="white" text="&#xf06e;" (tap)="productosver(producto.id)"></button>
       </AbsoluteLayout>
-
-      <AbsoluteLayout position="relative" class="contenedor_productos">
-        <Image class="fondo_producto" src=" ~/app/images/productos.png"></Image>
-        <Image class="producto_img" src=" ~/app/images/pirelli.png"></Image>
-        <label class="producto_precio" text="$ 430.000 "></label>
-        <label class="info_producto" text=" Llantas pirelli"></label>
-        <button id="comprar" class="fas" backgroundColor="#CA2141" color="white" text="&#xf217;"></button>
-        <button id="detalle" class="fas" backgroundColor="#44B1D0" color="white" text="&#xf06e;" (tap)="productosver()"></button>
-      </AbsoluteLayout>
-
     </StackLayout>
 
   </ScrollView>

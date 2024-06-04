@@ -12,7 +12,7 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   getRegisters(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/Productos`);
+    return this.http.get<any[]>(`${this.apiUrl}/Productos/`);
   }
 
   getRegisterById(id: number): Observable<any> {
@@ -20,7 +20,7 @@ export class ApiService {
   }
 
   addRegister(post: any): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/Productos`, post);
+    return this.http.post<any>(`${this.apiUrl}/Productos/`, post);
   }
 
   updateRegister(id: number, post: any): Observable<any> {
@@ -31,4 +31,6 @@ export class ApiService {
   deleteRegister(id: number): Observable<any> {
     return this.http.delete<any>(`${this.apiUrl}/Productos/${id}/`);
   }
+
+  
 }

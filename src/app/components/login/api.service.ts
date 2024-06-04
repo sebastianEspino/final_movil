@@ -11,7 +11,7 @@ export class ApiService {
     constructor(private http: HttpClient) { }
 
     login(datos: any): Observable<any> {
-        return this.http.post<any>(`${apiUrl}token-auth/`, datos);
+        return this.http.post<any>(`${global.apiUrl}token-auth/`, datos);
     }
 }
 
