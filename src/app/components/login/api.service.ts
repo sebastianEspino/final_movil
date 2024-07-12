@@ -8,10 +8,13 @@ import { Observable, map } from 'rxjs';
 })
 export class ApiService {
 
-    constructor(private http: HttpClient) { }
+  apiUrl = 'http://10.171.68.189:8000/api/1.0/token-auth/';
+  constructor(private http: HttpClient) {}
 
-    login(datos: any): Observable<any> {
-        return this.http.post<any>(`${global.apiUrl}token-auth/`, datos);
-    }
+  login(datos: any): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}`, datos);
+  }
+  
+
 }
 

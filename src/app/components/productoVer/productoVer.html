@@ -11,23 +11,23 @@
         </StackLayout>
     </StackLayout>
     <StackLayout row="1">
-        <AbsoluteLayout position="relative">
+        <AbsoluteLayout position="relative" *ngIf="details">
             <Image src="~/app/images/tarjetas_fondo2.png"></Image>
             <label class="divisor"></label>
             <label class="divisor_marco"></label>
-            <image src="~/app/images/pirelli.png" class="img_usuario"></image>
+            <image [src]="details.foto" class="img_usuario"></image>
         </AbsoluteLayout>
     </StackLayout>
-    <StackLayout row="2">
-        <label class="centrado_titulo" text="Producto: "></label>
-        <label class="centrado" text="Llantas pirelli"></label>
+    <StackLayout row="2" *ngIf="details">
+        <label class="centrado_titulo" text="Producto:"></label>
+        <label class="centrado" text="{{ details.nombre }}"></label>
         <label class="centrado_titulo" text="Descripcion"></label>
-        <label class="centrado" text="Llantas pirelli rin 24-4´"></label>
+        <label class="centrado" text="{{ details.descripcion_producto }}"></label>
         <label class="centrado_titulo" text="Precio: "></label>
-        <label class="centrado" text=" $ 435.000"></label> 
+        <label class="centrado" text="{{ details.Precio }}"></label> 
         <label class="centrado_sesion" text="¿Desea añadir al carrito de compra?"></label> 
         <FlexboxLayout justifyContent="center">
-            <button class="fas" backgroundColor="#CA2141" color="white" text="&#xf060;" ></button>
+            <button class="fas" backgroundColor="#CA2141" color="white" text="&#xf060;" (tap)="back()" ></button>
             <button id="detalle" class="fas" backgroundColor="#CA2141" color="white" text="&#xf217;" ></button>
         </FlexboxLayout>
     </StackLayout>

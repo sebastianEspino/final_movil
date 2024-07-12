@@ -4,6 +4,7 @@ import { ApiService } from './api.service';
 import { ItemEventData } from "@nativescript/core/ui/list-view";
 import { Dialogs } from '@nativescript/core'
 import { Page } from "@nativescript/core";
+import { ConstantPool } from '@angular/compiler';
 
 @Component({
   selector: 'productos',
@@ -21,19 +22,25 @@ export class ProductosComponent implements OnInit {
 
   public onItemTap(args: ItemEventData) {
     let register = this.productos[args.index]
+    console.log(`Filtrar por cat: ${register.id}`)
+    this.router.navigate(['productosVer'], { queryParams: { id: register.id } });
+    console.log(register)
+
+
+
     //console.log(`Index: ${args.index}; Item: ${register.id}`);
     //console.log(`ID: ${register.id} - NOMBRE: ${register.nombre_cat} - DESCRCIPCIÓN: ${register.desc} `)
   
     //Consultar por ID en la API
-    this.apiService.getRegisterById(register.id).subscribe((res) => {
-        Dialogs.alert({
-            title: 'Detalles!',
-            message: `ID: ${res.id}\nNOMBRE: ${res.nombre}\nDESCRCIPCIÓN: ${res.descripcion_producto} `,
-            okButtonText: 'OK',
-            cancelable: true,
-        });
-        console.info(res)
-    });
+    //this.apiService.getRegisterById(register.id).subscribe((res) => {
+      //  Dialogs.alert({
+        //    title: 'Detalles!',
+          //  message: `ID: ${res.id}\nNOMBRE: ${res.nombre}\nDESCRCIPCIÓN: ${res.descripcion_producto} `,
+           // okButtonText: 'OK',
+            //cancelable: true,
+     //   });
+     //   console.info(res)
+   // });
   }
   
   public eliminarCat(item){
@@ -108,6 +115,11 @@ export class ProductosComponent implements OnInit {
         this.productos1 = data;
     });
   }
+
+  public showDetail(item){
+    this.router.navigate(['productoVer'], { queryParams: { id: item } });
+  }
+
 
 
 

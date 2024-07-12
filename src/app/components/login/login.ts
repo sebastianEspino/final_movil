@@ -4,6 +4,7 @@ import { exit } from "nativescript-exit";
 import { ApiService } from './api.service';
 import { Dialogs } from '@nativescript/core'
 import { ActivatedRoute } from '@angular/router';
+import { openUrl } from '@nativescript/core/utils';
 
 
 @Component({
@@ -20,7 +21,7 @@ export class LoginComponent {
       console.info("Averiguando si hay datos...");
       if (localStorage.getItem('sena.token')){
           console.log("Bienvenido "+JSON.parse( localStorage.getItem('sena.user')).nombre+"!!");
-          this.router.navigate(['home']);
+          this.router.navigate(['landing']);
       }
   }
 
@@ -40,7 +41,7 @@ export class LoginComponent {
           username: this.nick,
           password: this.password
       };
-
+      console.log(`${this.nick}, ${this.password}`)
       this.apiService.login(data).subscribe((res) => {
           if (res && res.token.length > 0){
               console.info(res)
@@ -52,13 +53,15 @@ export class LoginComponent {
                   okButtonText: 'OK',
                   cancelable: true,
               });
-              this.router.navigate(['landing']);
+
+              this.router.navigate(['landing'], { queryParams: { id: res.user.user_id } })
           }
       },error => {
           console.log(error.status)
           if (error.status == 400){
               Dialogs.alert({
                   title: 'Alerta',
+                  
                   message: 'Usuario o contraseña incorrectos',
                   okButtonText: 'OK',
                   cancelable: true,
@@ -77,5 +80,9 @@ export class LoginComponent {
 
   public onExit(): void {
       exit(); // will close application
+  }
+
+  public navigateToTerms(): void {
+    openUrl('http://repwheels.pythonanywhere.com/tyc');
   }
 }

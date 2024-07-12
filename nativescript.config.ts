@@ -1,7 +1,7 @@
 import { NativeScriptConfig } from '@nativescript/core';
 
 export default {
-  id: 'org.nativescript.adso',
+  id: 'com.pythonanywhere.repwheels',
   appPath: 'src',
   appResourcesPath: 'App_Resources',
   android: {

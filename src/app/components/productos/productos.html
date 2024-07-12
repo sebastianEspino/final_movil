@@ -29,8 +29,8 @@
         <Image class="producto_img" [src]="producto.foto"></Image>
         <label class="producto_precio" text="{{ producto.Precio }}"></label>
         <label class="info_producto" text=" {{ producto.nombre }}"></label>
-        <button id="comprar" class="fas" backgroundColor="#CA2141" color="white" text="&#xf217;" ></button>
-        <button id="detalle" class="fas" backgroundColor="#44B1D0" color="white" text="&#xf06e;" (tap)="productosver(producto.id)"></button>
+        <button id="comprar" class="fas" backgroundColor="#CA2141" color="white" text="&#xf217;" (tap)='onItemTap($event)' ></button>
+        <button id="detalle" class="fas" backgroundColor="#44B1D0" color="white" text="&#xf06e;" (tap)="showDetail(producto.id)"></button>
       </AbsoluteLayout>
     </StackLayout>
 

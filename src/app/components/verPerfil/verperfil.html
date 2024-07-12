@@ -24,11 +24,9 @@
     </StackLayout>
     <StackLayout row="2">
         <label class="centrado_titulo" text="Usuario: "></label>
-        <label class="centrado" text="Nombre Usuario"></label>
+        <label class="centrado" [text]="nombre"></label>
         <label class="centrado_titulo" text="E-Mail"></label>
-        <label class="centrado" text="Usuario@us.us"></label>
-        <label class="centrado_titulo" text="ID usuario: "></label>
-        <label class="centrado" text="***66***"></label> 
+        <label class="centrado" [text]="email"></label>
         <label class="centrado_sesion" text="¿Desea cerrar sesion?"></label> 
         <button class="fas" backgroundColor="#CA2141" color="white" text="&#xf2f5;" (tap)="cerrar_sesion()"  width="20%"></button>
     </StackLayout>

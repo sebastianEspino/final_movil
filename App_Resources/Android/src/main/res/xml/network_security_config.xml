@@ -5,4 +5,7 @@
             <certificates src="system" />
         </trust-anchors>
     </base-config>
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">repwheels.pythonanywhere.com</domain>
+    </domain-config>
 </network-security-config>

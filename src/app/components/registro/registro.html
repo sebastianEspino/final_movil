@@ -8,17 +8,25 @@
       <label class="espacio2"></label>
       <StackLayout>
         <Label text="NOMBRE " class="label_imput"></Label>
-        <TextField class="inputs" ></TextField>
+        <TextField class="inputs" (textChange)="inputChange($event, 'nombre')" ></TextField>
         <Label text="E-MAIL " class="label_imput"></Label>
-        <TextField class="inputs" ></TextField>
+        <TextField class="inputs" (textChange)="inputChange($event, 'correo')"></TextField>
         <Label text="CONTRASEÑA " class="label_imput" ></Label>
-        <TextField class="inputs" type="password" ></TextField>
+        <TextField class="inputs" type="password" (textChange)="inputChange($event, 'password')"  secure="true"></TextField>
         <Label text="CONFIRMAR CONTRASEÑA " class="label_imput" ></Label>
-        <TextField class="inputs" type="password" ></TextField>
+        <TextField class="inputs" type="password" (textChange)="inputChange($event, 'confirmPassword')" secure="true"></TextField>
         <label class="espacio2" ></label>
-        <Button text="REGISTRARSE"  [nsRouterLink]="['/landing']"  pageTransition="slide" ></Button>
+        <Button text="REGISTRARSE"  (tap)="registrarse()"  pageTransition="slide" ></Button>
         <Label class="label_noti" text="¿Ya tienes una cuenta?"></Label>
         <Button text="INGRESAR "  [nsRouterLink]="['/login']" pageTransition="slide" ></Button>
+        <Switch
+        color="#BFCDAC"
+        backgroundColor="green"
+        offBackgroundColor="#DC493D"
+        [(ngModel)]="isAcceptTermin"
+        (checkedChange)="onSwitchChange($event)"
+      ></Switch>
+      <Label (tap)="navigateToTerms()"  text="Aceptar Términos y Condiciones" class="label_noti" textDecoration="underline" textAlign="center" style="color: aliceblue;"></Label>
       </StackLayout>
     </StackLayout>
     

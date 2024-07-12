@@ -1,6 +1,7 @@
 import { Router } from "@angular/router";
 import { Component, OnInit } from '@angular/core'
 import { Page } from "@nativescript/core";
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'landing',
@@ -8,9 +9,12 @@ import { Page } from "@nativescript/core";
   styleUrls: ['./landing.css']
 })
 export class LandingComponent implements OnInit {
-  public constructor(private router: Router, private page: Page) {
+  id:number;
+  public constructor(private router: Router, private page: Page,private activatedRoute: ActivatedRoute) {
     // Use the component constructor to inject providers.
   }
+
+
 
   ngOnInit(): void {
     this.page.actionBarHidden = true;
@@ -19,7 +23,15 @@ export class LandingComponent implements OnInit {
     this.router.navigate(["landing"]);
   }
   public perfil(){
-    this.router.navigate(["verperfil"])
+    this.activatedRoute.queryParams
+        .subscribe((params) => {
+         this.id = params.id
+         console.log(params.id)
+         this.router.navigate(["verperfil"],{ queryParams: { id: this.id } })
+        }
+      );
+      
+  
   }
   public productos(){
     this.router.navigate(["productos"])

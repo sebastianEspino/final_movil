@@ -21,7 +21,7 @@ import { HttpClientModule } from '@angular/common/http'
 class AppComponentModule {}
 
 global.url = "http://10.171.68.189:8000";
-global.apiUrl = url + "/api/1.0/";
+global.apiUrl = global.url + "/api/1.0/";
 
 
 
@@ -33,9 +33,7 @@ global.localStorage = {
   setItem(key: string, value: string) {
       return appSettings.setString(key, value);
   },
-  length(){
-      return 0;
-  },
+  length:0,
   clear(){
       return appSettings.clear();
   },

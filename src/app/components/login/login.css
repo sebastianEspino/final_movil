@@ -29,14 +29,14 @@ button{
     margin-left: 300px;
     margin-right: 300px;
 }
-.inputs{
+#inputs{
     
-    font-size: 15%;
+    font-size: 10%;
     color: #fcf9ee;
     margin-left: 300px;
     margin-right: 300px;
 }
-.input_password{
+#input_password{
     font-size: 15%;
     color: #fcf9ee;
     margin-left: 300px;
@@ -47,4 +47,8 @@ button{
     margin-top: 10px;
     text-align: center;
     color: #CA2141;
+}
+
+.w{
+    color: white;
 }
