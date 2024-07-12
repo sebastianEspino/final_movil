@@ -14,8 +14,8 @@ import { openUrl } from '@nativescript/core/utils';
 })
 
 export class LoginComponent {
-  nick: string = "sebas";
-  password: string = "11";
+  nick: string = "";
+  password: string = "";
   public constructor(private router: Router, private apiService: ApiService, private activatedRoute: ActivatedRoute) {
       // Use the component constructor to inject providers.
       console.info("Averiguando si hay datos...");
