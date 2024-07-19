@@ -1,31 +1,33 @@
-<StackLayout>
-  <AbsoluteLayout position="relative">
-    <Image class="completo" src="~/app/images/fondo_login.png"></Image>
-      <StackLayout class="completo">
-        <Image class="logo" src="~/app/images/sin_fondo.png"></Image>
-        <label class="espacio1"></label>
-        <label class="centrado" text="Inicio de Sesion"></label>
-        <label class="espacio2"></label>
-          <StackLayout>
-            <Label class="w" text="E-MAIL " class="label_imput"></Label>
-            <TextField id="inputs" class="label_imput" [text]="nick"
-            class="fas"
-            (textChange)="inputChange($event, 'nick')"
-            placeholder="Usuario"></TextField>
-            <Label class="w"  text="CONTRASEÑA" class="label_imput"></Label>
-            <TextField id="input_password"  [text]="password"
-            class="fas"
-            (textChange)="inputChange($event, 'password')"
-            placeholder="contrasena" secure="true"></TextField>
-            <label class="espacio2"></label>
-            
-            <Button text="INGRESAR " (tap)="loguear()" pageTransition="slide" clearHistory="true"></Button>
-            <Label class="label_noti" text="¿No tienes una cuenta?"></Label>
-            <Button text="REGISTRARSE" [nsRouterLink]="['/registro']" pageTransition="slide"></Button>
-          </StackLayout>
-      </StackLayout>
-  </AbsoluteLayout>
-  <AbsoluteLayout>
-    <label text="buscar"></label>
-  </AbsoluteLayout>
-</StackLayout>
+<ScrollView>
+  <StackLayout>
+    <AbsoluteLayout position="relative">
+      <Image class="completo" src="~/app/images/fondo_login.png"></Image>
+        <StackLayout class="completo">
+          <Image class="logo" src="~/app/images/sin_fondo.png"></Image>
+          <label class="espacio1"></label>
+          <label class="centrado" text="Inicio de Sesion"></label>
+          <label class="espacio2"></label>
+            <StackLayout>
+              <Label class="w" text="E-MAIL " class="label_imput"></Label>
+              <TextField id="inputs" class="label_imput" [text]="nick"
+              class="fas"
+              (textChange)="inputChange($event, 'nick')"
+              placeholder="Usuario"></TextField>
+              <Label class="w"  text="CONTRASEÑA" class="label_imput"></Label>
+              <TextField id="input_password"  [text]="password"
+              class="fas"
+              (textChange)="inputChange($event, 'password')"
+              placeholder="contrasena" secure="true"></TextField>
+              <label class="espacio2"></label>
+              
+              <Button text="INGRESAR " (tap)="loguear()" pageTransition="slide" clearHistory="true"></Button>
+              <Label class="label_noti" text="¿No tienes una cuenta?"></Label>
+              <Button text="REGISTRARSE" [nsRouterLink]="['/registro']" pageTransition="slide"></Button>
+            </StackLayout>
+        </StackLayout>
+    </AbsoluteLayout>
+    <AbsoluteLayout>
+      <label text="buscar"></label>
+    </AbsoluteLayout>
+  </StackLayout>
+</ScrollView>

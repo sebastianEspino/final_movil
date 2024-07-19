@@ -18,8 +18,6 @@ export class ApiService {
   getRegisterById(id: number): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}/Productos/${id}/`);
   }
-    // desde aca inicia
-  
 
       // Obtener el carrito desde localStorage
   getCart(): any[] {
@@ -44,4 +42,5 @@ export class ApiService {
   clearCart(): void {
     localStorage.removeItem(this.apiUrl);
   }
+
 }

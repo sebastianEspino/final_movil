@@ -6,20 +6,25 @@ import { Dialogs } from '@nativescript/core'
 import { Page } from "@nativescript/core";
 import { ConstantPool } from '@angular/compiler';
 
+
 @Component({
-  selector: 'productos',
-  templateUrl: './productos.html',
-  styleUrls: ['./productos.css']
+  selector: 'carrito',
+  templateUrl: './carrito.html',
+  styleUrls: ['./carrito.css']
 })
-export class ProductosComponent implements OnInit {
+export class CarritoComponent implements OnInit {
+  carrito: any[] = [];
   productos1: any[];
  
+
+
+  
   public constructor(private router: Router,private apiService: ApiService, private page: Page) {
     // Use the component constructor to inject providers.
     this.obtenerTodos();
     
   }
-
+  
   public eliminarCat(item){
     Dialogs.confirm({
         title: 'Confirmación',
@@ -66,6 +71,7 @@ export class ProductosComponent implements OnInit {
   
   ngOnInit(): void {
     this.page.actionBarHidden = true;
+    this.carrito = this.apiService.getCart();
   }
   public onTap() {
     this.router.navigate(["landing"]);
@@ -97,9 +103,14 @@ export class ProductosComponent implements OnInit {
     this.router.navigate(['productoVer'], { queryParams: { id: item } });
   }
 
-  addToCart(producto: any): void {
-    this.apiService.addToCart(producto);
-    alert("Producto añadido al carrito");
+  removeFromCart(index: number): void {
+    this.apiService.removeFromCart(index);
+  }
+
+  clearCart(): void {
+    this.apiService.clearCart();
+    this.carrito = [];
+    alert("Carrito vaciado");
   }
 
 

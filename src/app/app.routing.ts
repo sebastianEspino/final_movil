@@ -6,7 +6,7 @@ import { LandingComponent } from "./components/landing/landing";
 import { ProductosComponent } from "./components/productos/productos"; 
 import { ProductoVerComponent } from "./components/productoVer/productoVer";
 import { GestionComponent } from "./components/gestion/gestion";
-
+import { CarritoComponent } from "./components/carrito/carrito";
 
 
 export const appRoutes: any = [
@@ -18,6 +18,7 @@ export const appRoutes: any = [
   { path: "productos", component: ProductosComponent },
   { path: "productoVer", component: ProductoVerComponent },
   { path: "gestion", component: GestionComponent },
+  { path: "carrito", component: CarritoComponent },
 ];
 
 export const appComponents: any = [
@@ -27,5 +28,6 @@ export const appComponents: any = [
   LandingComponent,
   ProductosComponent,
   GestionComponent,
-  ProductoVerComponent
+  ProductoVerComponent,
+  CarritoComponent
 ];

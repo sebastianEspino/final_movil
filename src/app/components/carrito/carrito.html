@@ -1,0 +1,13 @@
+<!-- carrito.component.html -->
+<StackLayout>
+  <ListView [items]="carrito">
+    <ng-template let-item="item" let-i="index">
+      <StackLayout>
+        <Label [text]="item.name"></Label>
+        <Label [text]="'$' + item.price"></Label>
+        <Button text="Eliminar del carrito" (tap)="removeFromCart(i)"></Button>
+      </StackLayout>
+    </ng-template>
+  </ListView>
+  <Button text="Vaciar carrito" (tap)="clearCart()"></Button>
+</StackLayout>
