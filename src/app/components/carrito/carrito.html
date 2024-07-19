@@ -1,0 +1,15 @@
+<!-- carrito.component.html -->
+<StackLayout>
+  <ListView [items]="carrito">
+    <ng-template let-item="item" let-i="index">
+      <StackLayout>
+        <Label [text]="item.nombre"></Label>
+        <Label [text]="'$' + item.Precio"></Label>
+        <Label [text]="item.descripcion_producto"></Label>
+        <Image class="img" [src]="item.foto"></Image>
+        <Button text="Eliminar del carrito" (tap)="removeFromCart(index)"></Button>
+      </StackLayout>
+    </ng-template>
+  </ListView>
+  <Button text="Vaciar carrito" (tap)="clearCart()"></Button>
+</StackLayout>

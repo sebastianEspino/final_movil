@@ -6,41 +6,23 @@ import { Dialogs } from '@nativescript/core'
 import { Page } from "@nativescript/core";
 import { ConstantPool } from '@angular/compiler';
 
+
 @Component({
-  selector: 'productos',
-  templateUrl: './productos.html',
-  styleUrls: ['./productos.css']
+  selector: 'carrito',
+  templateUrl: './carrito.html',
+  styleUrls: ['./carrito.css']
 })
-export class ProductosComponent implements OnInit {
+export class CarritoComponent implements OnInit {
+  carrito: any[] = [];
   productos1: any[];
  
+
+
+  
   public constructor(private router: Router,private apiService: ApiService, private page: Page) {
     // Use the component constructor to inject providers.
     this.obtenerTodos();
     
-  }
-
-  public onItemTap(args: ItemEventData) {
-    let register = this.productos[args.index]
-    console.log(`Filtrar por cat: ${register.id}`)
-    this.router.navigate(['productosVer'], { queryParams: { id: register.id } });
-    console.log(register)
-
-
-
-    //console.log(`Index: ${args.index}; Item: ${register.id}`);
-    //console.log(`ID: ${register.id} - NOMBRE: ${register.nombre_cat} - DESCRCIPCIÓN: ${register.desc} `)
-  
-    //Consultar por ID en la API
-    //this.apiService.getRegisterById(register.id).subscribe((res) => {
-      //  Dialogs.alert({
-        //    title: 'Detalles!',
-          //  message: `ID: ${res.id}\nNOMBRE: ${res.nombre}\nDESCRCIPCIÓN: ${res.descripcion_producto} `,
-           // okButtonText: 'OK',
-            //cancelable: true,
-     //   });
-     //   console.info(res)
-   // });
   }
   
   public eliminarCat(item){
@@ -89,6 +71,7 @@ export class ProductosComponent implements OnInit {
   
   ngOnInit(): void {
     this.page.actionBarHidden = true;
+    this.carrito = this.apiService.getCart();
   }
   public onTap() {
     this.router.navigate(["landing"]);
@@ -120,10 +103,14 @@ export class ProductosComponent implements OnInit {
     this.router.navigate(['productoVer'], { queryParams: { id: item } });
   }
 
+  removeFromCart(index: number): void {
+    this.apiService.removeFromCart(index);
+  }
 
-  addToCart(producto: any): void {
-    this.apiService.addToCart(producto);
-    alert("Producto añadido al carrito");
+  clearCart(): void {
+    this.apiService.clearCart();
+    this.carrito = [];
+    alert("Carrito vaciado");
   }
 
 

@@ -16,7 +16,7 @@
     <button class="gestion" backgroundColor="#44B1D0" text="Gestion de productos" (tap)="gestion()"></button>
     <FlexboxLayout>
       <SearchBar class="busqueda" hint="Buscar ... " marginBottom="10" />
-      <button id="vercarrito" class="fas" backgroundColor="#CA2141" color="white" text="&#xf218; ver" (tap)="productos()"></button>
+      <Button [nsRouterLink]="['/carrito']" pageTransition="slide" id="vercarrito" class="fas" text="&#xf218; ver" backgroundColor="#CA2141" color="white"></Button>
     </FlexboxLayout>
     
   </StackLayout>
@@ -29,7 +29,7 @@
         <Image class="producto_img" [src]="producto.foto"></Image>
         <label class="producto_precio" text="{{ producto.Precio }}"></label>
         <label class="info_producto" text=" {{ producto.nombre }}"></label>
-        <button id="comprar" class="fas" backgroundColor="#CA2141" color="white" text="&#xf217;" (tap)='onItemTap($event)' ></button>
+        <button id="comprar" class="fas" backgroundColor="#CA2141" color="white" text="&#xf217;" (tap)='addToCart(producto)' ></button>
         <button id="detalle" class="fas" backgroundColor="#44B1D0" color="white" text="&#xf06e;" (tap)="showDetail(producto.id)"></button>
       </AbsoluteLayout>
     </StackLayout>

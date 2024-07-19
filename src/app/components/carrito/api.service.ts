@@ -12,32 +12,19 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   getRegisters(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/Productos/`);
+    return this.http.get<any[]>(`${this.apiUrl}/Productos`);
   }
 
   getRegisterById(id: number): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}/Productos/${id}/`);
   }
 
-  addRegister(post: any): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/Productos`, post);
-  }
-
-  updateRegister(id: number, post: any): Observable<any> {
-    console.log(`datos: ${post.nombre_cat} - ${post.desc}`)
-    return this.http.put<any>(`${this.apiUrl}/Productos/${id}/`, post);
-  }
-
-  deleteRegister(id: number): Observable<any> {
-    return this.http.delete<any>(`${this.apiUrl}/Productos/${id}/`);
-  }
-
+      // Obtener el carrito desde localStorage
   getCart(): any[] {
     const cartString = localStorage.getItem(this.apiUrl);
     return cartString ? JSON.parse(cartString) : [];
   }
-
-
+  // Añadir un producto al carrito
   addToCart(producto: any): void {
     let cart = this.getCart();
     cart.push(producto);
