@@ -74,7 +74,7 @@ export class ProductosComponent implements OnInit {
     this.router.navigate(["verperfil"])
   }
   public productos(){
-    this.router.navigate(["productos"])
+    this.router.navigate(["carrito"])
   }
   public productosver(id){
     this.router.navigate(["productoVer"])
