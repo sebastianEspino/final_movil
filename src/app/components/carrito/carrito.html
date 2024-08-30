@@ -1,15 +1,29 @@
 <!-- carrito.component.html -->
-<StackLayout>
+<StackLayout backgroundColor="#232323">
+  <StackLayout backgroundColor="#fcf9ee" justifyContent="center" class="nav">
+    <FlexboxLayout class="nav">
+      <AbsoluteLayout position="relative">
+        <Image src="~/app/images/fondo_nav2.png"></Image>
+        <FlexboxLayout class="botones_nav">
+          <button class="fas" backgroundColor="#CA2141" color="white" text="&#xf015;" (tap)="onTap()"></button>
+          <button class="fas" backgroundColor="#CA2141" color="white" text="&#xf07a;" (tap)="productos()"></button>
+          <button class="fas" backgroundColor="#CA2141" color="white" text="&#xf007;" (tap)="perfil()"></button>
+        </FlexboxLayout>
+      </AbsoluteLayout>
+    </FlexboxLayout>
+  </StackLayout>
+  <Button text="Vaciar carrito" (tap)="clearCart()"></Button>
   <ListView [items]="carrito">
     <ng-template let-item="item" let-i="index">
       <StackLayout>
-        <Label [text]="item.nombre"></Label>
-        <Label [text]="'$' + item.Precio"></Label>
-        <Label [text]="item.descripcion_producto"></Label>
+        <Label class="detalles" [text]="item.nombre"></Label>
+        <Label class="detalles" [text]="'$' + item.Precio"></Label>
+        <Label class="detalles" [text]="item.descripcion_producto"></Label>
         <Image class="img" [src]="item.foto"></Image>
         <Button text="Eliminar del carrito" (tap)="removeFromCart(index)"></Button>
       </StackLayout>
     </ng-template>
   </ListView>
-  <Button text="Vaciar carrito" (tap)="clearCart()"></Button>
+  
+  
 </StackLayout>
