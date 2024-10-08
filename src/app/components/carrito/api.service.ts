@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
 
-  apiUrl ='http://10.171.68.189:8000/api/1.0';
+  apiUrl ='http://10.171.68.25:8000/api/1.0';
 
   constructor(private http: HttpClient) { }
 
@@ -19,6 +19,9 @@ export class ApiService {
     return this.http.get<any>(`${this.apiUrl}/Productos/${id}/`);
   }
 
+  deleteRegister(table: string, id: number): Observable<any> {
+    return this.http.delete<any>(`${this.apiUrl}/${table}/${id}/`);
+  }
       // Obtener el carrito desde localStorage
   getCart(): any[] {
     const cartString = localStorage.getItem(this.apiUrl);

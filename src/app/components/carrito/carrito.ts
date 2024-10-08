@@ -25,49 +25,6 @@ export class CarritoComponent implements OnInit {
     
   }
   
-  public eliminarCat(item){
-    Dialogs.confirm({
-        title: 'Confirmación',
-        message: `Está seguro de eliminar este registro ? ${item.nombre}`,
-        okButtonText: 'SI',
-        cancelButtonText: 'No',
-        neutralButtonText: 'Cancelar',
-        })
-        .then((result) => {
-            console.log(result);
-            if (result){
-                this.apiService.deleteRegister(item.id).subscribe((res: string) => {
-                    Dialogs.alert({
-                        title: 'Respuesta:',
-                        message: "Categoría eliminada correctamente!!",
-                        okButtonText: 'OK',
-                        cancelable: true,
-                    });
-                    this.obtenerTodos();
-                },error => {
-                    console.log(error.status)
-                    if (error.status == 400){
-                        Dialogs.alert({
-                            title: 'Respuesta:',
-                            message: error.error.message,
-                            okButtonText: 'OK',
-                            cancelable: true,
-                        });
-                    }
-                    else{
-                        Dialogs.alert({
-                            title: 'Respuesta:',
-                            message: error.message,
-                            okButtonText: 'OK',
-                            cancelable: true,
-                        });
-                    }
-  
-                });
-            }
-        });
-  
-  }
   
   ngOnInit(): void {
     this.page.actionBarHidden = true;
@@ -105,6 +62,7 @@ export class CarritoComponent implements OnInit {
 
   removeFromCart(index: number): void {
     this.apiService.removeFromCart(index);
+    alert("Producto eliminado del carrito !!");
   }
 
   clearCart(): void {

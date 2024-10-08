@@ -7,7 +7,9 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
 
-  apiUrl = 'https://repwheels.pythonanywhere.com/api/1.0';
+  
+
+  apiUrl = 'http://10.171.68.25:8000/api/1.0';
 
   constructor(private http: HttpClient) { }
 
@@ -30,5 +32,17 @@ export class ApiService {
 
   deleteRegister(id: number): Observable<any> {
     return this.http.delete<any>(`${this.apiUrl}/Productos/${id}/`);
+  }
+
+  getCart(): any[] {
+    const cartString = localStorage.getItem(this.apiUrl);
+    return cartString ? JSON.parse(cartString) : [];
+  }
+
+
+  addToCart(producto: any): void {
+    let cart = this.getCart();
+    cart.push(producto);
+    localStorage.setItem(this.apiUrl, JSON.stringify(cart));
   }
 }

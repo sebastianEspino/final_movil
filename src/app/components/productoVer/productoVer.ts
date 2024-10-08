@@ -18,6 +18,9 @@ export class ProductoVerComponent implements OnInit {
 
   id:number;
   details: any;
+
+  productos1: any[];
+ 
   public constructor(private router: Router, private page: Page, private activatedRoute: ActivatedRoute,private apiService: ApiService) {
     // Use the component constructor to inject providers.
     this.obtenerDetails();
@@ -55,6 +58,11 @@ export class ProductoVerComponent implements OnInit {
     }
     public back(){
       this.router.navigate(['productos'])
+    }
+  
+    addToCart(producto: any): void {
+      this.apiService.addToCart(producto);
+      alert("Producto añadido al carrito");
     }
   
   }

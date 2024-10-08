@@ -28,7 +28,7 @@
         <label class="centrado_sesion" text="¿Desea añadir al carrito de compra?"></label> 
         <FlexboxLayout justifyContent="center">
             <button class="fas" backgroundColor="#CA2141" color="white" text="&#xf060;" (tap)="back()" ></button>
-            <button id="detalle" class="fas" backgroundColor="#CA2141" color="white" text="&#xf217;" ></button>
+            <button id="comprar" class="fas" backgroundColor="#CA2141" color="white" text="&#xf217;" (tap)='addToCart(details)' ></button>
         </FlexboxLayout>
     </StackLayout>
 </GridLayout>

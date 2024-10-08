@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
 
-  apiUrl = 'http://10.171.68.189:8000/api/1.0/registrar_usuario';
+  apiUrl = 'http://10.171.68.25:8000/api/1.0/registrar_usuario';
 
   constructor(private http: HttpClient) { }
 

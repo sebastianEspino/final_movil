@@ -16,9 +16,9 @@
   <ListView [items]="carrito">
     <ng-template let-item="item" let-i="index">
       <StackLayout>
-        <Label class="detalles" [text]="item.nombre"></Label>
-        <Label class="detalles" [text]="'$' + item.Precio"></Label>
-        <Label class="detalles" [text]="item.descripcion_producto"></Label>
+        <Label class="detalle" [text]="item.nombre"  ></Label>
+        <Label class="detalle" [text]="'$' + item.Precio"></Label>
+        <Label class="detalle" [text]="item.descripcion_producto" ></Label>
         <Image class="img" [src]="item.foto"></Image>
         <Button text="Eliminar del carrito" (tap)="removeFromCart(index)"></Button>
       </StackLayout>
